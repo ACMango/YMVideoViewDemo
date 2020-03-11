@@ -64,7 +64,12 @@
 // 手机方向发生变化
 - (void)updateLayoutWithExpectOrientation:(UIDeviceOrientation)orientation containerSize:(CGSize)containerSize {
     
-    UIEdgeInsets padding = YBIBPaddingByBrowserOrientation(orientation);
+//    UIEdgeInsets padding = YBIBPaddingByBrowserOrientation(orientation);
+    UIEdgeInsets padding = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        padding =  UIApplication.sharedApplication.delegate.window.safeAreaInsets;
+    }
+    
     CGFloat width = containerSize.width - padding.left - padding.right, height = containerSize.height;
     self.topBar.frame = CGRectMake(padding.left, padding.top, width, [YMVideoTopBar defaultHeight]);
     self.actionBar.frame = CGRectMake(padding.left, height - [YMVideoActionBar defaultHeight] - padding.bottom - 10, width, [YMVideoActionBar defaultHeight]);
@@ -161,7 +166,7 @@
     self.playButton.hidden = NO;
     [self.actionBar setCurrentValue:0];
     self.actionBar.hidden = YES;
-    self.topBar.hidden = YES;
+    self.topBar.hidden = NO;
     
     _playing = NO;
     

@@ -194,16 +194,16 @@
 		117B5F2D23BB2AD5002A3773 /* ViedeoIcons */ = {
 			isa = PBXGroup;
 			children = (
-				117B5F2E23BB2AD5002A3773 /* ymvv_pause@3x.png */,
-				117B5F2F23BB2AD5002A3773 /* ymvv_pause@2x.png */,
-				117B5F3023BB2AD5002A3773 /* ymvv_cancel@2x.png */,
-				117B5F3123BB2AD5002A3773 /* ymvv_play@2x.png */,
 				117B5F3223BB2AD5002A3773 /* ymvv_bigPlay@2x.png */,
 				117B5F3323BB2AD5002A3773 /* ymvv_bigPlay@3x.png */,
-				117B5F3423BB2AD5002A3773 /* ymvv_play@3x.png */,
+				117B5F3023BB2AD5002A3773 /* ymvv_cancel@2x.png */,
 				117B5F3523BB2AD5002A3773 /* ymvv_cancel@3x.png */,
 				117B5F3623BB2AD5002A3773 /* ymvv_circlePoint@2x.png */,
 				117B5F3723BB2AD5002A3773 /* ymvv_circlePoint@3x.png */,
+				117B5F2F23BB2AD5002A3773 /* ymvv_pause@2x.png */,
+				117B5F2E23BB2AD5002A3773 /* ymvv_pause@3x.png */,
+				117B5F3123BB2AD5002A3773 /* ymvv_play@2x.png */,
+				117B5F3423BB2AD5002A3773 /* ymvv_play@3x.png */,
 			);
 			path = ViedeoIcons;
 			sourceTree = "<group>";

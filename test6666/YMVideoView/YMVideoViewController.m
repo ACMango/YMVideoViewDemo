@@ -26,6 +26,8 @@
     videoView.delegate = self;
     [self.view addSubview:videoView];
     self.videoView = videoView;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -43,12 +45,70 @@
     }
 }
 
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
 #pragma mark - public Methods
 - (void)showFromViewController:(UIViewController *)contanierVC {
     
     self.modalPresentationStyle = UIModalPresentationFullScreen;
     [contanierVC presentViewController:self animated:YES completion:^{
     }];
+}
+
+#pragma mark - private Methods
+// 屏幕改变时
+- (void)orientationChanged {
+
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    switch ([[UIDevice currentDevice] orientation]) {
+
+        case UIDeviceOrientationPortrait:
+
+            NSLog(@"portrait");
+            [self.videoView updateLayoutWithExpectOrientation:UIDeviceOrientationPortrait containerSize:CGSizeMake(width, height)];
+            
+            break;
+
+        case UIDeviceOrientationPortraitUpsideDown:
+
+            NSLog(@"portraitUpSideDown");
+
+            break;
+
+        case  UIDeviceOrientationLandscapeLeft:
+
+            NSLog(@"landscapeLeft");
+            [self.videoView updateLayoutWithExpectOrientation: UIDeviceOrientationLandscapeLeft containerSize:CGSizeMake(width, height)];
+            break;
+
+        case  UIDeviceOrientationLandscapeRight:
+
+            NSLog(@"landscapeRight");
+            [self.videoView updateLayoutWithExpectOrientation: UIDeviceOrientationLandscapeRight containerSize:CGSizeMake(width, height)];
+            break;
+
+        case  UIDeviceOrientationFaceDown:
+
+            NSLog(@"facedown!!");
+
+            break;
+
+        case  UIDeviceOrientationFaceUp:
+
+            NSLog(@"FaceUp");
+
+            break;
+
+        default:
+
+            break;
+
+        }
 }
 
 #pragma mark - <YBIBVideoViewDelegate>

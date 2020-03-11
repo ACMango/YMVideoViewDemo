@@ -99,8 +99,15 @@ UIImage *YBIBSnapshotView(UIView *view) {
 }
 
 UIEdgeInsets YBIBPaddingByBrowserOrientation(UIDeviceOrientation orientation) {
+    
+    
     UIEdgeInsets padding = UIEdgeInsetsZero;
     if (!YBIBIsIphoneXSeries()) return padding;
+    
+    if (@available(iOS 11.0, *)) {
+        
+        padding =  UIApplication.sharedApplication.delegate.window.safeAreaInsets;
+    }
     
     UIDeviceOrientation barOrientation = (UIDeviceOrientation)UIApplication.sharedApplication.statusBarOrientation;
     
