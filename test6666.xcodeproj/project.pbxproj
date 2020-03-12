@@ -16,7 +16,6 @@
 		117B5F0E23BB296B002A3773 /* test6666Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F0D23BB296B002A3773 /* test6666Tests.m */; };
 		117B5F1923BB296B002A3773 /* test6666UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F1823BB296B002A3773 /* test6666UITests.m */; };
 		117B5F3E23BB2AD5002A3773 /* YMVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F2723BB2AD5002A3773 /* YMVideoViewController.m */; };
-		117B5F3F23BB2AD5002A3773 /* YMVideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F2823BB2AD5002A3773 /* YMVideoData.m */; };
 		117B5F4023BB2AD5002A3773 /* YMVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F2B23BB2AD5002A3773 /* YMVideoView.m */; };
 		117B5F4123BB2AD5002A3773 /* ymvv_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 117B5F2E23BB2AD5002A3773 /* ymvv_pause@3x.png */; };
 		117B5F4223BB2AD5002A3773 /* ymvv_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 117B5F2F23BB2AD5002A3773 /* ymvv_pause@2x.png */; };
@@ -28,9 +27,11 @@
 		117B5F4823BB2AD5002A3773 /* ymvv_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 117B5F3523BB2AD5002A3773 /* ymvv_cancel@3x.png */; };
 		117B5F4923BB2AD5002A3773 /* ymvv_circlePoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 117B5F3623BB2AD5002A3773 /* ymvv_circlePoint@2x.png */; };
 		117B5F4A23BB2AD5002A3773 /* ymvv_circlePoint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 117B5F3723BB2AD5002A3773 /* ymvv_circlePoint@3x.png */; };
-		117B5F4B23BB2AD5002A3773 /* YBIBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F3A23BB2AD5002A3773 /* YBIBUtilities.m */; };
 		117B5F4C23BB2AD5002A3773 /* YMVideoActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F3C23BB2AD5002A3773 /* YMVideoActionBar.m */; };
 		117B5F4D23BB2AD5002A3773 /* YMVideoTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 117B5F3D23BB2AD5002A3773 /* YMVideoTopBar.m */; };
+		11984F3B2419DF79002F2FF9 /* YMVVUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 11984F3A2419DF79002F2FF9 /* YMVVUtilities.m */; };
+		11984F4C241A1CA6002F2FF9 /* ybib_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11984F46241A1CA6002F2FF9 /* ybib_loading@3x.png */; };
+		11984F4D241A1CA6002F2FF9 /* ybib_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11984F48241A1CA6002F2FF9 /* ybib_loading@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		117B5EF123BB2969002A3773 /* test6666.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test6666.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		117B5EF123BB2969002A3773 /* YMVideoPalyerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMVideoPalyerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117B5EF423BB2969002A3773 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		117B5EF523BB2969002A3773 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		117B5EF723BB2969002A3773 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -68,11 +69,9 @@
 		117B5F1823BB296B002A3773 /* test6666UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test6666UITests.m; sourceTree = "<group>"; };
 		117B5F1A23BB296B002A3773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117B5F2723BB2AD5002A3773 /* YMVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMVideoViewController.m; sourceTree = "<group>"; };
-		117B5F2823BB2AD5002A3773 /* YMVideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMVideoData.m; sourceTree = "<group>"; };
 		117B5F2923BB2AD5002A3773 /* YMVideoTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMVideoTopBar.h; sourceTree = "<group>"; };
 		117B5F2A23BB2AD5002A3773 /* YMVideoActionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMVideoActionBar.h; sourceTree = "<group>"; };
 		117B5F2B23BB2AD5002A3773 /* YMVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMVideoView.m; sourceTree = "<group>"; };
-		117B5F2C23BB2AD5002A3773 /* YBIBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBIBUtilities.h; sourceTree = "<group>"; };
 		117B5F2E23BB2AD5002A3773 /* ymvv_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_pause@3x.png"; sourceTree = "<group>"; };
 		117B5F2F23BB2AD5002A3773 /* ymvv_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_pause@2x.png"; sourceTree = "<group>"; };
 		117B5F3023BB2AD5002A3773 /* ymvv_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_cancel@2x.png"; sourceTree = "<group>"; };
@@ -83,12 +82,14 @@
 		117B5F3523BB2AD5002A3773 /* ymvv_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_cancel@3x.png"; sourceTree = "<group>"; };
 		117B5F3623BB2AD5002A3773 /* ymvv_circlePoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_circlePoint@2x.png"; sourceTree = "<group>"; };
 		117B5F3723BB2AD5002A3773 /* ymvv_circlePoint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ymvv_circlePoint@3x.png"; sourceTree = "<group>"; };
-		117B5F3823BB2AD5002A3773 /* YMVideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMVideoData.h; sourceTree = "<group>"; };
 		117B5F3923BB2AD5002A3773 /* YMVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMVideoViewController.h; sourceTree = "<group>"; };
-		117B5F3A23BB2AD5002A3773 /* YBIBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBIBUtilities.m; sourceTree = "<group>"; };
 		117B5F3B23BB2AD5002A3773 /* YMVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMVideoView.h; sourceTree = "<group>"; };
 		117B5F3C23BB2AD5002A3773 /* YMVideoActionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMVideoActionBar.m; sourceTree = "<group>"; };
 		117B5F3D23BB2AD5002A3773 /* YMVideoTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMVideoTopBar.m; sourceTree = "<group>"; };
+		11984F392419DF79002F2FF9 /* YMVVUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMVVUtilities.h; sourceTree = "<group>"; };
+		11984F3A2419DF79002F2FF9 /* YMVVUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMVVUtilities.m; sourceTree = "<group>"; };
+		11984F46241A1CA6002F2FF9 /* ybib_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ybib_loading@3x.png"; sourceTree = "<group>"; };
+		11984F48241A1CA6002F2FF9 /* ybib_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ybib_loading@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +130,7 @@
 		117B5EF223BB2969002A3773 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				117B5EF123BB2969002A3773 /* test6666.app */,
+				117B5EF123BB2969002A3773 /* YMVideoPalyerView.app */,
 				117B5F0923BB296B002A3773 /* test6666Tests.xctest */,
 				117B5F1423BB296B002A3773 /* test6666UITests.xctest */,
 			);
@@ -175,12 +176,10 @@
 			isa = PBXGroup;
 			children = (
 				117B5F2D23BB2AD5002A3773 /* ViedeoIcons */,
-				117B5F2C23BB2AD5002A3773 /* YBIBUtilities.h */,
-				117B5F3A23BB2AD5002A3773 /* YBIBUtilities.m */,
+				11984F392419DF79002F2FF9 /* YMVVUtilities.h */,
+				11984F3A2419DF79002F2FF9 /* YMVVUtilities.m */,
 				117B5F2A23BB2AD5002A3773 /* YMVideoActionBar.h */,
 				117B5F3C23BB2AD5002A3773 /* YMVideoActionBar.m */,
-				117B5F3823BB2AD5002A3773 /* YMVideoData.h */,
-				117B5F2823BB2AD5002A3773 /* YMVideoData.m */,
 				117B5F2923BB2AD5002A3773 /* YMVideoTopBar.h */,
 				117B5F3D23BB2AD5002A3773 /* YMVideoTopBar.m */,
 				117B5F3B23BB2AD5002A3773 /* YMVideoView.h */,
@@ -194,6 +193,8 @@
 		117B5F2D23BB2AD5002A3773 /* ViedeoIcons */ = {
 			isa = PBXGroup;
 			children = (
+				11984F48241A1CA6002F2FF9 /* ybib_loading@2x.png */,
+				11984F46241A1CA6002F2FF9 /* ybib_loading@3x.png */,
 				117B5F3223BB2AD5002A3773 /* ymvv_bigPlay@2x.png */,
 				117B5F3323BB2AD5002A3773 /* ymvv_bigPlay@3x.png */,
 				117B5F3023BB2AD5002A3773 /* ymvv_cancel@2x.png */,
@@ -225,7 +226,7 @@
 			);
 			name = test6666;
 			productName = test6666;
-			productReference = 117B5EF123BB2969002A3773 /* test6666.app */;
+			productReference = 117B5EF123BB2969002A3773 /* YMVideoPalyerView.app */;
 			productType = "com.apple.product-type.application";
 		};
 		117B5F0823BB296B002A3773 /* test6666Tests */ = {
@@ -315,8 +316,10 @@
 				117B5F4623BB2AD5002A3773 /* ymvv_bigPlay@3x.png in Resources */,
 				117B5F4523BB2AD5002A3773 /* ymvv_bigPlay@2x.png in Resources */,
 				117B5F4A23BB2AD5002A3773 /* ymvv_circlePoint@3x.png in Resources */,
+				11984F4C241A1CA6002F2FF9 /* ybib_loading@3x.png in Resources */,
 				117B5F4223BB2AD5002A3773 /* ymvv_pause@2x.png in Resources */,
 				117B5F4423BB2AD5002A3773 /* ymvv_play@2x.png in Resources */,
+				11984F4D241A1CA6002F2FF9 /* ybib_loading@2x.png in Resources */,
 				117B5F4823BB2AD5002A3773 /* ymvv_cancel@3x.png in Resources */,
 				117B5F4723BB2AD5002A3773 /* ymvv_play@3x.png in Resources */,
 				117B5F4323BB2AD5002A3773 /* ymvv_cancel@2x.png in Resources */,
@@ -349,13 +352,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				117B5EF923BB2969002A3773 /* ViewController.m in Sources */,
-				117B5F3F23BB2AD5002A3773 /* YMVideoData.m in Sources */,
 				117B5F4D23BB2AD5002A3773 /* YMVideoTopBar.m in Sources */,
-				117B5F4B23BB2AD5002A3773 /* YBIBUtilities.m in Sources */,
 				117B5F0423BB296B002A3773 /* main.m in Sources */,
 				117B5F3E23BB2AD5002A3773 /* YMVideoViewController.m in Sources */,
 				117B5F4C23BB2AD5002A3773 /* YMVideoActionBar.m in Sources */,
 				117B5F4023BB2AD5002A3773 /* YMVideoView.m in Sources */,
+				11984F3B2419DF79002F2FF9 /* YMVVUtilities.m in Sources */,
 				117B5EF623BB2969002A3773 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2T5H68HY9F;
+				DEVELOPMENT_TEAM = G94ZSG2Y96;
 				INFOPLIST_FILE = test6666/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +538,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.senseLuxuryMember.www.test6666;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YMVideoPalyerView;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -546,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2T5H68HY9F;
+				DEVELOPMENT_TEAM = G94ZSG2Y96;
 				INFOPLIST_FILE = test6666/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -554,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.senseLuxuryMember.www.test6666;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YMVideoPalyerView;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

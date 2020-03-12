@@ -56,6 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *thumbImageView;
 @property (nonatomic, strong, readonly) YMVideoTopBar *topBar;
 @property (nonatomic, strong, readonly) YMVideoActionBar *actionBar;
+@property (nonatomic, strong) UIImageView *loadingView;
 // actions
 @property (nonatomic, strong, readonly) UITapGestureRecognizer *tapGesture;
 

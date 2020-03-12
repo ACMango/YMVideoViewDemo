@@ -1,12 +1,13 @@
 //
-//  YBIBUtilities.m
-//  YBImageBrowserDemo
+//  YMVVUtilities.m
+//  test6666
 //
-//  Created by 杨少 on 2018/4/11.
-//  Copyright © 2018年 波儿菜. All rights reserved.
+//  Created by SL设计 on 2020/3/12.
+//  Copyright © 2020 Mango. All rights reserved.
 //
 
-#import "YBIBUtilities.h"
+#import "YMVVUtilities.h"
+
 #import <sys/utsname.h>
 
 
@@ -136,6 +137,6 @@ UIEdgeInsets YBIBPaddingByBrowserOrientation(UIDeviceOrientation orientation) {
 }
 
 
-@implementation YBIBUtilities
+@implementation YMVVUtilities
 
 @end

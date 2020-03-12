@@ -16,6 +16,7 @@
 
 @implementation YMVideoViewController
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -47,6 +48,7 @@
 
 - (void)dealloc {
     
+    NSLog(@"videoViewController 已经移除了");
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -69,43 +71,43 @@
 
         case UIDeviceOrientationPortrait:
 
+        {
             NSLog(@"portrait");
             [self.videoView updateLayoutWithExpectOrientation:UIDeviceOrientationPortrait containerSize:CGSizeMake(width, height)];
+        }
             
             break;
 
         case UIDeviceOrientationPortraitUpsideDown:
 
             NSLog(@"portraitUpSideDown");
-
             break;
 
-        case  UIDeviceOrientationLandscapeLeft:
-
+        case UIDeviceOrientationLandscapeLeft:
+            
+        {
             NSLog(@"landscapeLeft");
-            [self.videoView updateLayoutWithExpectOrientation: UIDeviceOrientationLandscapeLeft containerSize:CGSizeMake(width, height)];
+            [self.videoView updateLayoutWithExpectOrientation:UIDeviceOrientationLandscapeLeft containerSize:CGSizeMake(width, height)];
+        }
             break;
 
-        case  UIDeviceOrientationLandscapeRight:
+        case UIDeviceOrientationLandscapeRight:
 
+        {
             NSLog(@"landscapeRight");
-            [self.videoView updateLayoutWithExpectOrientation: UIDeviceOrientationLandscapeRight containerSize:CGSizeMake(width, height)];
+            [self.videoView updateLayoutWithExpectOrientation:UIDeviceOrientationLandscapeRight containerSize:CGSizeMake(width, height)];
+        }
             break;
 
-        case  UIDeviceOrientationFaceDown:
-
+        case UIDeviceOrientationFaceDown:
             NSLog(@"facedown!!");
-
             break;
 
-        case  UIDeviceOrientationFaceUp:
+        case UIDeviceOrientationFaceUp:
 
             NSLog(@"FaceUp");
-
             break;
-
         default:
-
             break;
 
         }
@@ -123,6 +125,7 @@
 //            [self.yb_auxiliaryViewHandler() yb_showLoadingWithContainer:self];
 //        }
 //    });
+
 }
 
 - (void)ym_startPlayForVideoView:(YMVideoView *)view {
@@ -130,6 +133,7 @@
 //    [self.yb_backView ybib_videoPlayingAdd:self];
 //    [self.yb_auxiliaryViewHandler() yb_hideLoadingWithContainer:self];
 //    [self hideToolViews:YES];
+
 }
 
 - (void)ym_didPlayToEndTimeForVideoView:(YMVideoView *)view {
@@ -179,5 +183,17 @@
 //    YBIBVideoData *data = (YBIBVideoData *)self.yb_cellData;
 //    data.autoPlayCount = count;
 }
+
+#pragma mark - Other
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+}
+
+#pragma mark - setter && getter
 
 @end

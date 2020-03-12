@@ -7,7 +7,7 @@
 //
 
 #import "YMVideoView.h"
-#import "YBIBUtilities.h"
+//#import "YMVVUtilities.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface YMVideoView ()
@@ -44,6 +44,7 @@
         [self addSubview:self.topBar];
         [self addSubview:self.actionBar];
         [self addSubview:self.playButton];
+        [self addSubview:self.loadingView];
         [self addObserverForSystem];
         
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(respondsToTapGesture:)];
@@ -75,7 +76,10 @@
     self.actionBar.frame = CGRectMake(padding.left, height - [YMVideoActionBar defaultHeight] - padding.bottom - 10, width, [YMVideoActionBar defaultHeight]);
     self.playButton.center = CGPointMake(containerSize.width / 2.0, containerSize.height / 2.0);
     _playerLayer.frame = (CGRect){CGPointZero, containerSize};
+    self.frame = (CGRect){CGPointZero, containerSize};
     
+    self.thumbImageView.center = self.center;
+    self.loadingView.center = self.center;
 }
 
 - (void)reset {
@@ -124,10 +128,12 @@
 
 - (void)preparPlay {
     
+
     if (!self.urlString) { // 播放资源不存在
         return;
     }
     
+    [self startImageViewAnimation]; // 开始播放转圈动画
     _preparingPlay = YES;
     _playFailed = NO;
     
@@ -149,8 +155,15 @@
 }
 
 - (void)startPlay {
+    
+    // 移除掉缓冲动画
+    [self stopImageViewAnimation];
+    self.loadingView.hidden = NO;
+    [self.loadingView removeFromSuperview];
+    
     if (_player) {
         _playing = YES;
+        self.thumbImageView.hidden = YES;
         
         [_player play];
         [self.actionBar play];
@@ -178,6 +191,21 @@
         [_player pause];
         [self.actionBar pause];
     }
+}
+
+- (void)startImageViewAnimation {
+    CABasicAnimation *ra = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    ra.toValue = [NSNumber numberWithFloat:M_PI * 2];
+    ra.duration = 1;
+    ra.cumulative = YES;
+    ra.repeatCount = HUGE_VALF;
+    ra.removedOnCompletion = NO;
+    ra.fillMode = kCAFillModeForwards;
+    [self.loadingView.layer addAnimation:ra forKey:@"ra"];
+}
+
+- (void)stopImageViewAnimation {
+    [self.loadingView.layer removeAllAnimations];
 }
 
 #pragma mark - observe
@@ -372,5 +400,16 @@
     }
 }
 
+
+- (UIImageView *)loadingView {
+    
+    if (!_loadingView) {
+        _loadingView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
+        _loadingView.center = self.center;
+        _loadingView.contentMode = UIViewContentModeCenter;
+        _loadingView.image = [UIImage imageNamed:@"ybib_loading"];
+    }
+    return _loadingView;
+}
 
 @end
